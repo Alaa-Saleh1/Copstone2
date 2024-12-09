@@ -30,12 +30,12 @@ public class BookingRequest {
     @Column(columnDefinition = "int not null")
     private Integer workspaceId;
 
-    @NotNull(message = "Start date and time are required")
+    
     @FutureOrPresent(message = "Start date and time must be now or in the future")
     @Column(nullable = false)
     private LocalDateTime startDateTime;
 
-    @NotNull(message = "End date and time are required")
+    
     @Future(message = "End date and time must be in the future")
     @Column(nullable = false)
     private LocalDateTime endDateTime;
